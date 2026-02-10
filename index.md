@@ -20,6 +20,7 @@ With a strong background in the characterization of bioactives, I bridge the gap
 This project showcases the application of **Response Surface Methodology (RSM)** to optimize the extraction of Aloesin from agri-food by-products. It transforms experimental data into an interactive decision-making tool.
 
 * 🖥️ [**Launch the Interactive App**](https://aloe-extraction-optimization.streamlit.app/)
+* 📂 [**Code & Technical Documentation**](https://github.com/mikel-ao/aloe-extraction-optimization)
 * 📝 [**Read the Published Research (Biology 2021)**](https://doi.org/10.3390/biology10100951)
 
 ### Technical Core:
