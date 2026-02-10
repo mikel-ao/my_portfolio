@@ -1,6 +1,6 @@
-# Mikel Añibarro-Ortega, PhD 🧪📊
+# Dr. Mikel Añibarro-Ortega 🧪📊
 ### Chemist | MSc in Natural Product Pharmacy | PhD in AgriFood Science & Technology
-**Data Science & Process Optimization **
+** Data Science & Process Optimization **
 
 ---
 
