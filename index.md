@@ -5,12 +5,18 @@
 ---
 
 ## 👨‍🔬 Professional Profile
-I am a **Chemist** and **Researcher** with an **MSc in Natural Product Pharmacy** and a **PhD in AgriFood Science & Technology**. My expertise focuses on the **design of novel functional food products** and the **digital transformation of laboratory R&D**, combining deep pharmaceutical chemistry knowledge with modern data science to optimize high-value compound recovery from plant by-products.
 
-With a strong background in the characterization of bioactives, I bridge the gap between complex analytical chemistry and predictive modeling to:
-* **Design & Formulate:** Development of innovative functional foods and nutraceuticals based on natural bioactive ingredients.
-* **Optimize Industrial Processes:** Using A/B testing and machine learning models to maximize efficiency and sustainability.
-* **Drive Bioeconomy Innovation:** Transforming raw laboratory data into scalable, data-driven solutions for the chemical, pharmaceutical and agrifood industries.
+**Experienced Researcher & Data Scientist**
+
+I am an experienced researcher with an extensive track record in turning complex and disorganized data into clear, actionable insights. My approach is transferable to various industrial sectors: I leverage scientific rigor and advanced Data Science to optimize processes, predict trends, and uncover hidden realities behind data noise.
+
+Transversal Value & Strategic Impact
+
+Cross-Industry Versatility: I bridge the gap between complex technical data and clear business strategies, applicable to sectors ranging from FoodTech, Pharma to Cosmetic industry.
+
+Translation of Complexity: Experienced at taking raw, "noisy" data—whether from laboratories, industrial sensors, or global markets—and converting it into scalable solutions.
+
+Predictive & Product Mindset: I specialize in identifying industrial inefficiencies and designing models that don't just analyze the past, but prescribe the next strategic move.
 
 ---
 
