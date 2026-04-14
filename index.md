@@ -5,7 +5,7 @@
 
 ---
 
-## 👨‍🔬 Professional Profile
+## Professional Profile
 
 ### **Experienced Researcher & Data Scientist**
 
@@ -21,7 +21,9 @@ I am an experienced researcher with an extensive track record in turning complex
 
 ---
 
-## 🚀 Featured Project: Bioactive Extraction Optimizer
+## Featured Projects: 
+
+### 1. Bioactive Extraction Optimizer
 **Standardizing Phytochemical Recovery through Predictive Modeling.**
 
 This project showcases the application of **Response Surface Methodology (RSM)** to optimize the extraction of Aloesin from agri-food by-products. It transforms experimental data into an interactive decision-making tool.
