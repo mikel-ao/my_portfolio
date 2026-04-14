@@ -1,6 +1,7 @@
-# Dr. Mikel Añibarro-Ortega 🧪📊
-### Chemist | MSc in Natural Product Pharmacy | PhD in AgriFood Science & Technology
-###  **Data Science & Process Optimization**
+# Mikel Añibarro-Ortega, PhD
+### Data-Driven Insights & Industrial Process Optimization
+### Experienced Researcher transforming complexity into strategic value
+#### Python | SQL | Machine Learning | R&D Strategy
 
 ---
 
@@ -16,7 +17,7 @@ I am an experienced researcher with an extensive track record in turning complex
 
 **Translation of Complexity:** Experienced at taking raw, "noisy" data—whether from laboratories, industrial sensors, or global markets—and converting it into scalable solutions.
 
-**Predictive & Product Mindset:** I specialize in identifying industrial inefficiencies and designing models that don't just analyze the past, but prescribe the next strategic move.
+**Predictive & Product Mindset:** I specialize in managing inefficiencies and designing models that don't just analyze the past, but prescribe the next strategic move.
 
 ---
 
