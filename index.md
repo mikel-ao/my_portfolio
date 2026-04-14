@@ -6,17 +6,17 @@
 
 ## 👨‍🔬 Professional Profile
 
-**Experienced Researcher & Data Scientist**
+### **Experienced Researcher & Data Scientist**
 
 I am an experienced researcher with an extensive track record in turning complex and disorganized data into clear, actionable insights. My approach is transferable to various industrial sectors: I leverage scientific rigor and advanced Data Science to optimize processes, predict trends, and uncover hidden realities behind data noise.
 
-Transversal Value & Strategic Impact
+**Transversal Value & Strategic Impact**
 
-Cross-Industry Versatility: I bridge the gap between complex technical data and clear business strategies, applicable to sectors ranging from FoodTech, Pharma to Cosmetic industry.
+**Cross-Industry Versatility:** I bridge the gap between complex technical data and clear business strategies, applicable to sectors ranging from FoodTech, Pharma to Cosmetic industry.
 
-Translation of Complexity: Experienced at taking raw, "noisy" data—whether from laboratories, industrial sensors, or global markets—and converting it into scalable solutions.
+**Translation of Complexity:** Experienced at taking raw, "noisy" data—whether from laboratories, industrial sensors, or global markets—and converting it into scalable solutions.
 
-Predictive & Product Mindset: I specialize in identifying industrial inefficiencies and designing models that don't just analyze the past, but prescribe the next strategic move.
+**Predictive & Product Mindset:** I specialize in identifying industrial inefficiencies and designing models that don't just analyze the past, but prescribe the next strategic move.
 
 ---
 
