@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mikel Añibarro - Data Scientist & Research Scientist. Specialized in tabular ML, statistical analysis, and food tech.">
+    <meta name="keywords" content="Data Science, Machine Learning, Research, Food Tech, Python, Statistics">
+    <title>Mikel Añibarro - Data Scientist & Research Scientist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1e3a5f;
+            --accent: #2563eb;
+            --accent-light: #3b82f6;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f9fafb;
+            --border: #e5e7eb;
+            --success: #10b981;
+            --white: #ffffff;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--white);
+        }
+
+        /* ==================== HEADER ==================== */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            color: var(--white);
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 4px solid var(--accent-light);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+
+        header .subtitle {
+            font-size: 1.3rem;
+            font-weight: 300;
+            opacity: 0.95;
+            margin-bottom: 20px;
+        }
+
+        header .tagline {
+            font-size: 0.95rem;
+            opacity: 0.85;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            line-height: 1.5;
+        }
+
+        .header-links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            font-size: 0.95rem;
+        }
+
+        .header-links a {
+            color: var(--white);
+            text-decoration: none;
+            padding: 8px 16px;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .header-links a:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: var(--white);
+        }
+
+        /* ==================== CONTAINER ==================== */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ==================== SECTION LAYOUT ==================== */
+        section {
+            padding: 60px 20px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 40px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid var(--accent);
+            display: inline-block;
+        }
+
+        /* ==================== ABOUT ==================== */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+            margin-top: 30px;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--text-dark);
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+        .about-text strong {
+            color: var(--primary);
+        }
+
+        .value-props {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .value-prop {
+            padding: 20px;
+            background: var(--bg-light);
+            border-left: 4px solid var(--accent);
+            border-radius: 4px;
+        }
+
+        .value-prop h4 {
+            color: var(--primary);
+            margin-bottom: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .value-prop p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        /* ==================== PROJECTS ==================== */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .project-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-color: var(--accent);
+            transform: translateY(-5px);
+        }
+
+        .project-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: var(--accent);
+            color: var(--white);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .project-card h3 {
+            color: var(--primary);
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .project-subtitle {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .project-problem {
+            background: #fef3c7;
+            padding: 12px;
+            border-left: 4px solid #f59e0b;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            color: #92400e;
+            font-weight: 500;
+        }
+
+        .project-section {
+            margin-bottom: 20px;
+        }
+
+        .project-section h4 {
+            color: var(--primary);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .project-section p,
+        .project-section ul {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .project-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .project-section ul li {
+            padding-left: 20px;
+            position: relative;
+            margin-bottom: 6px;
+        }
+
+        .project-section ul li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .tech-badge {
+            background: var(--bg-light);
+            color: var(--primary);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid var(--border);
+        }
+
+        .project-links {
+            display: flex;
+            gap: 12px;
+            margin-top: auto;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+
+        .project-links a {
+            flex: 1;
+            padding: 10px 16px;
+            text-align: center;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .btn-demo {
+            background: var(--accent);
+            color: var(--white);
+            border: none;
+        }
+
+        .btn-demo:hover {
+            background: var(--accent-light);
+        }
+
+        .btn-github {
+            background: var(--text-dark);
+            color: var(--white);
+            border: none;
+        }
+
+        .btn-github:hover {
+            background: var(--primary);
+        }
+
+        /* ==================== SKILLS ==================== */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .skill-category {
+            background: var(--bg-light);
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+        }
+
+        .skill-category h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            padding: 8px 0;
+            color: var(--text-dark);
+            font-size: 0.95rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .skill-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* ==================== EXPERIENCE ==================== */
+        .experience-item {
+            padding: 25px;
+            border-left: 4px solid var(--accent);
+            background: var(--bg-light);
+            margin-bottom: 25px;
+            border-radius: 4px;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .experience-header h3 {
+            color: var(--primary);
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        .experience-date {
+            color: var(--accent);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .experience-role {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+        }
+
+        .experience-item ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .experience-item ul li {
+            padding-left: 20px;
+            position: relative;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+            font-size: 0.95rem;
+        }
+
+        .experience-item ul li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        /* ==================== EDUCATION ==================== */
+        .education-item {
+            padding: 20px;
+            border-left: 4px solid var(--success);
+            background: var(--bg-light);
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+
+        .education-item h3 {
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .education-item p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .education-award {
+            display: inline-block;
+            background: var(--success);
+            color: var(--white);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+
+        /* ==================== FOOTER ==================== */
+        footer {
+            background: var(--primary);
+            color: var(--white);
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        footer a {
+            color: var(--accent-light);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            header .subtitle {
+                font-size: 1rem;
+            }
+
+            section h2 {
+                font-size: 1.5rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-links {
+                flex-direction: column;
+            }
+
+            .project-links a {
+                width: 100%;
+            }
+        }
+
+        /* ==================== ANIMATIONS ==================== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        section {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- ==================== HEADER ==================== -->
+    <header>
+        <div class="container">
+            <h1>Mikel Añibarro Ortega</h1>
+            <p class="subtitle">Data Scientist & Research Scientist, PhD</p>
+            <p class="tagline">
+                Transforming complex scientific data into actionable insights. 
+                Specialized in tabular machine learning, statistical rigor, and food tech innovation.
+            </p>
+            <div class="header-links">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="https://linkedin.com/in/mikelanibarroortega" target="_blank">LinkedIn</a>
+                <a href="https://github.com/mikel-ao" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== ABOUT ==================== -->
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        I'm a <strong>PhD Chemist</strong> transitioning into Data Science, bringing 5+ years of rigorous research 
+                        and experimental design expertise to the world of analytics and machine learning. My foundation is built 
+                        on statistical rigor, scientific methodology, and the discipline of turning noisy, real-world data into 
+                        actionable insights.
+                    </p>
+                    <p>
+                        My expertise spans <strong>tabular ML, multivariate analysis (PCA, PLS, LDA), experimental design (DoE, RSM), 
+                        and A/B testing</strong>. I bridge the gap between complex technical data and clear business strategy—whether 
+                        in FoodTech, Pharma, or Industrial optimization.
+                    </p>
+                    <p>
+                        <strong>What I bring:</strong> Scientific precision meets scalable solutions. I don't just analyze data; 
+                        I prescribe next moves.
+                    </p>
+                </div>
+                <div class="value-props">
+                    <div class="value-prop">
+                        <h4>🎯 Scientific Rigor</h4>
+                        <p>Trained in hypothesis testing, experimental design, and statistical validation. Every insight is reproducible and defensible.</p>
+                    </div>
+                    <div class="value-prop">
+                        <h4>🔄 Cross-functional Bridge</h4>
+                        <p>5+ years mentoring international teams. I translate between technical complexity and business strategy effortlessly.</p>
+                    </div>
+                    <div class="value-prop">
+                        <h4>📊 Tabular Data Expert</h4>
+                        <p>Specialized in ML on structured data. I know when to use simple statistics vs. complex models—and why.</p>
+                    </div>
+                    <div class="value-prop">
+                        <h4>🌍 Domain Deep Dives</h4>
+                        <p>Food science, chemistry, pharma background. I understand the domain, not just the algorithms.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PROJECTS ==================== -->
+    <section id="projects">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <!-- PROJECT 1: Aloesina Optimizer -->
+                <div class="project-card">
+                    <div class="project-number">1</div>
+                    <h3>Bioactive Extraction Optimizer</h3>
+                    <p class="project-subtitle">Predictive modeling for phytochemical recovery</p>
+                    
+                    <div class="project-problem">
+                        <strong>Problem:</strong> Standardizing Aloesin extraction from Aloe vera by-products required manual, 
+                        inefficient experimental iterations.
+                    </div>
+
+                    <div class="project-section">
+                        <h4>💡 Solution</h4>
+                        <p>
+                            Deployed a <strong>Response Surface Methodology (RSM)</strong> model that maps solvent/temperature/time 
+                            relationships to yield optimization. Transformed experimental data into an <strong>interactive decision-making tool</strong> 
+                            that reduces time-to-optimal-extraction by ~70%.
+                        </p>
+                    </div>
+
+                    <div class="project-section">
+                        <h4>🔬 Technical Core</h4>
+                        <ul>
+                            <li><strong>Analytical:</strong> HPLC-DAD-ESI/MSn quantification of Aloesin</li>
+                            <li><strong>Design:</strong> Central Composite Rotatable Design (CCRD) with Reduced Cubic Models</li>
+                            <li><strong>Impact:</strong> 70% reduction in optimization time; reproducible predictions</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-section">
+                        <h4>🛠 Tech Stack</h4>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Streamlit</span>
+                            <span class="tech-badge">Statsmodels</span>
+                            <span class="tech-badge">Plotly</span>
+                            <span class="tech-badge">Scikit-learn</span>
+                        </div>
+                    </div>
+
+                    <div class="project-links">
+                        <a href="https://aloe-extraction-optimization.streamlit.app/" class="btn-demo" target="_blank">
+                            🚀 Launch App
+                        </a>
+                        <a href="https://github.com/mikel-ao/aloe-extraction-optimization" class="btn-github" target="_blank">
+                            💻 GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- PROJECT 2: Food Labeling Audit -->
+                <div class="project-card">
+                    <div class="project-number">2</div>
+                    <h3>Food Labeling Audit</h3>
+                    <p class="project-subtitle">Uncovering hidden truths in food industry data</p>
+                    
+                    <div class="project-problem">
+                        <strong>Problem:</strong> Food labeling is contradictory and often misleading. Current standards (NutriScore, BIO seals) 
+                        have blind spots that enable manipulation.
+                    </div>
+
+                    <div class="project-section">
+                        <h4>💡 Key Findings</h4>
+                        <ul>
+                            <li><strong>The NutriScore Hack:</strong> Blind to industrial processing; ultraprocesados get A/B ratings by adding isolated fiber/protein</li>
+                            <li><strong>BIO Label Limitation:</strong> Guarantees sustainability but not nutritional quality—ecologic ≠ nutritious</li>
+                            <li><strong>Private Labels Win:</strong> Against stereotypes, store brands offer cleaner labels, less sugar, more fiber than big corporations</li>
+                            <li><strong>Plant-based Paradox:</strong> In meat-culture countries, vegan alternatives prioritize taste mimicry over protein density, adding chemical complexity</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-section">
+                        <h4>📊 Dataset & Scope</h4>
+                        <ul>
+                            <li>10,000+ products from OpenFoodFacts snapshot</li>
+                            <li>20 nutritional & labeling features</li>
+                            <li>Cross-segment analysis: categories, brands, regions</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-section">
+                        <h4>🛠 Tech Stack</h4>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Pandas</span>
+                            <span class="tech-badge">Matplotlib</span>
+                            <span class="tech-badge">Seaborn</span>
+                        </div>
+                    </div>
+
+                    <div class="project-links">
+                        <a href="https://github.com/mikel-ao/food-labelling-audit" class="btn-github" target="_blank">
+                            💻 GitHub (Notebook + Viz)
+                        </a>
+                    </div>
+                </div>
+
+                <!-- PROJECT 3: NutriScore 2.0 -->
+                <div class="project-card">
+                    <div class="project-number">3</div>
+                    <h3>NutriScore 2.0</h3>
+                    <p class="project-subtitle">Transparent, manipulation-proof food classification</p>
+                    
+                    <div class="project-problem">
+                        <strong>Problem:</strong> Original NutriScore is incomplete & manipulable. It doesn't account for 
+                        additives, processing complexity, or "false healthy" products.
+                    </div>
+
+                    <div class="project-section">
+                        <h4>💡 Solution</h4>
+                        <p>
+                            Built a <strong>custom additive classification system</strong> using EFSA safety data + PubMed API mining, 
+                            then applied <strong>K-means clustering</strong> on enriched feature space. Result: A food classification 
+                            that detects manipulated products and "false healthy" items that pass original NutriScore.
+                        </p>
+                    </div>
+
+                    <div class="project-section">
+                        <h4>🔬 Methodology</h4>
+                        <ul>
+                            <li><strong>Data Engineering:</strong> EFSA additive database + PubMed API for bioavailability/risk data</li>
+                            <li><strong>Feature Creation:</strong> Additive toxicity index, processing complexity score, nutrient density</li>
+                            <li><strong>Modeling:</strong> K-means clustering validated with Hierarchical Clustering dendrogram convergence</li>
+                            <li><strong>Robustness:</strong> Detects "false healthy" products (NutriScore A/B but flagged in 2.0)</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-section">
+                        <h4>📊 Dataset</h4>
+                        <ul>
+                            <li>Complete OpenFoodFacts database (~500k products)</li>
+                            <li>Engineered features: additives, nutritional profiles, processing markers</li>
+                            <li>External validation: EFSA + PubMed data integration</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-section">
+                        <h4>🛠 Tech Stack</h4>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Scikit-learn</span>
+                            <span class="tech-badge">K-means</span>
+                            <span class="tech-badge">Streamlit</span>
+                            <span class="tech-badge">APIs</span>
+                        </div>
+                    </div>
+
+                    <div class="project-links">
+                        <a href="https://nutriscore2-0.streamlit.app/" class="btn-demo" target="_blank">
+                            🚀 Launch App
+                        </a>
+                        <a href="https://github.com/mikel-ao/aditive_info" class="btn-github" target="_blank">
+                            💻 GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SKILLS ==================== -->
+    <section id="skills">
+        <div class="container">
+            <h2>Skills & Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>📊 Data Science & ML</h3>
+                    <ul class="skill-list">
+                        <li>Machine Learning (Supervised & Unsupervised)</li>
+                        <li>Tabular Data Analysis</li>
+                        <li>K-means, Hierarchical Clustering</li>
+                        <li>Classification & Regression</li>
+                        <li>Feature Engineering & Selection</li>
+                        <li>Model Validation & Evaluation</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>📈 Statistical Analysis</h3>
+                    <ul class="skill-list">
+                        <li>Multivariate Analysis (PCA, PLS, LDA)</li>
+                        <li>Design of Experiments (DoE)</li>
+                        <li>Response Surface Methodology (RSM)</li>
+                        <li>A/B Testing & Hypothesis Testing</li>
+                        <li>ANOVA & Statistical Inference</li>
+                        <li>Central Composite Designs</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>💻 Programming & Tools</h3>
+                    <ul class="skill-list">
+                        <li>Python (Pandas, NumPy, Scikit-learn)</li>
+                        <li>SQL & Database Queries</li>
+                        <li>Streamlit & Plotly (Visualization)</li>
+                        <li>Jupyter Notebooks & Git</li>
+                        <li>R (Statistical Analysis)</li>
+                        <li>APIs & Web Scraping</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>🌐 Soft Skills</h3>
+                    <ul class="skill-list">
+                        <li>Cross-cultural Team Leadership</li>
+                        <li>Mentoring & Knowledge Transfer</li>
+                        <li>Technical Communication (Tech & Non-tech)</li>
+                        <li>Stakeholder Management</li>
+                        <li>Project Coordination</li>
+                        <li>Problem-solving & Adaptability</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>🔬 Domain Expertise</h3>
+                    <ul class="skill-list">
+                        <li>Food Science & Technology</li>
+                        <li>Analytical Chemistry</li>
+                        <li>Bioactive Compounds</li>
+                        <li>Functional Foods</li>
+                        <li>By-product Valorization</li>
+                        <li>Pharmaceutical/Nutraceutical Development</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>🗣️ Languages</h3>
+                    <ul class="skill-list">
+                        <li>Spanish (Native)</li>
+                        <li>Basque (Native)</li>
+                        <li>English (C1 - Professional)</li>
+                        <li>Portuguese (C1 - Professional)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== EXPERIENCE ==================== -->
+    <section id="experience">
+        <div class="container">
+            <h2>Professional Experience</h2>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3>Research Scientist</h3>
+                    <span class="experience-date">Jan 2025 — Oct 2025</span>
+                </div>
+                <p class="experience-role">Polytechnic Institute of Bragança (IPB) | Portugal</p>
+                <ul>
+                    <li>Coordinated R&D data acquisition and analysis for cross-functional research teams</li>
+                    <li>Mentored 5+ junior researchers; ensured data quality, methodological rigor, and independence</li>
+                    <li>Translated complex quantitative findings into actionable research insights</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3>PhD Candidate & Researcher</h3>
+                    <span class="experience-date">Sep 2019 — Apr 2025</span>
+                </div>
+                <p class="experience-role">University of Vigo / IPB | Spain & Portugal</p>
+                <ul>
+                    <li><strong>Multivariate Analysis:</strong> Identified correlations between extraction methods, chemical composition, and biological activities using PCA, PLS, DoE, and RSM</li>
+                    <li><strong>Experimental Design:</strong> Central Composite Rotatable Design (CCRD) optimizations; A/B testing of nutraceutical formulations</li>
+                    <li><strong>Publications:</strong> Author of 28+ ISI-indexed scientific papers; 50+ conference communications</li>
+                    <li><strong>Impact:</strong> PhD awarded <em>Cum Laude</em> with International Distinction; co-inventor of 1 patent (PT117256-A)</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3>QC Laboratory Technician</h3>
+                    <span class="experience-date">Nov 2015 — Jun 2016</span>
+                </div>
+                <p class="experience-role">FYM - Italcementi Group | Spain</p>
+                <ul>
+                    <li>Executed standardized analytical tests on cement samples using XRF and chromatographic techniques</li>
+                    <li>Investigated data outliers; identified root causes and implemented corrective actions</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3>Laboratory Attendant</h3>
+                    <span class="experience-date">Feb 2017 — Jul 2017</span>
+                </div>
+                <p class="experience-role">Terai Cosmética | Spain</p>
+                <ul>
+                    <li>Executed cosmetic formulation processes under GMP protocols</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== EDUCATION ==================== -->
+    <section id="education">
+        <div class="container">
+            <h2>Education</h2>
+
+            <div class="education-item">
+                <h3>PhD in Agri-Food Science & Technology</h3>
+                <p>University of Vigo & Polytechnic Institute of Bragança | 2019–2025</p>
+                <span class="education-award">🎓 Cum Laude with International Distinction</span>
+            </div>
+
+            <div class="education-item">
+                <h3>MSc in Chemistry & Pharmacy of Natural Products</h3>
+                <p>University of Salamanca & Polytechnic Institute of Bragança | 2017–2019</p>
+            </div>
+
+            <div class="education-item">
+                <h3>BSc in Chemistry</h3>
+                <p>University of the Basque Country (EHU) | 2010–2016</p>
+            </div>
+
+            <div class="education-item">
+                <h3>Professional Certifications</h3>
+                <p>
+                    <strong>IBM Data Science Professional Certificate</strong> (2025) | 
+                    <strong>Google Advanced Data Analytics Specialization</strong> (2025) | 
+                    <strong>The Bridge Data Science Bootcamp</strong> (In Progress, Completes June 2026)
+                </p>
+            </div>
+
+            <div class="education-item">
+                <h3>Key Achievements</h3>
+                <p>
+                    28+ ISI-indexed publications | 50+ international conference presentations | 1 Patent (PT117256-A) | 
+                    Young Editorial Board Member, Exploration of Food and Foodomics Journal
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+        <div class="container">
+            <p>
+                📧 <a href="mailto:mklanibarro@gmail.com">mklanibarro@gmail.com</a> | 
+                🔗 <a href="https://linkedin.com/in/mikelanibarroortega" target="_blank">LinkedIn</a> | 
+                💻 <a href="https://github.com/mikel-ao" target="_blank">GitHub</a> | 
+                📱 (+34) 622 16 11 92
+            </p>
+            <p style="margin-top: 15px; opacity: 0.8;">
+                Built with clean HTML/CSS. Last updated: May 2026.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
